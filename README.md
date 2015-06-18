@@ -1,4 +1,4 @@
-Getting and Cleaning Data Course - Project
+Getting and Cleaning Data - Project
 ===================
 
 This file describes how to create the tidy data set required by the instructor in this project.
