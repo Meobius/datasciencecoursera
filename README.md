@@ -1,4 +1,6 @@
-datasciencecoursera
+Getting and Cleaning Data Course - Project
 ===================
 
-Repo for Coursera Data Scientist Specialization course
+This file describes how to create the tidy data set required by the instructor in this project.
+
+* Download this full datasciencecoursera folder on your machine
