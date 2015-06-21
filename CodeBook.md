@@ -12,16 +12,21 @@ This is the code book describing how we obtain the tidy data set required. We de
   - We read the file <i>features.txt</i> and name the columns of the previously merged observation set made of <i>X_test.txt</i> and <i>X_train.txt</i>.
   - We extract the columns containing the keywords "mean()" or "std()" in their name from the merged observation data set <i>X</i>.
   - We read the activity labels from the file <i>activity_labels.txt</i>. There are 6 possible activities.
-  - We label each outcome number in the previously merged outcome file <i>y</i> with the corresponding activity coming from the <i>activity_labels</i> previously loaded.
-  - From the previously merged observation data set <i>X</i>, we create a new data set that contains the average for each variable (column) and for each tuple activity/subject (row). This is our final tidy data set.
+  - We label each outcome number in the previously merged outcome vector <i>y</i> with the corresponding activity coming from the <i>activity_labels</i> previously loaded.
+  - We now read the files "subject_test.txt" and "subject_train.txt" so that we can know for each row who is correponding subject (there are 30 subjects in total). We merged these two vectors into one like we did for <i>X</i> and <i>y</i>
+  - We append the subject id vector created previously along with the activity vector <i>y</i> to the matrix <i>X</i>.
+  - From the previously merged large data set <i>X</i>, we create a new data set that contains the average for each variable (column) and for each tuple activity/subject (row). This is our final tidy data set.
 
 * Which intermediate variables did we use ?
 
-We used the variables <i>df_X_test</i>, <i>df_X_train</i>, <i>df_y_test</i>, <i>df_y_train</i> to store the test and training in  <i>X_test.txt</i>, <i>X_train.txt</i>, <i>y_train.txt</i>, <i>y_test.txt</i>.
-
-The merged observations and outcome data were stored in the variables <i>df_X</i> and <i>df_y</i>.
-
-The new data set containing a subset of the columns of <i>df_X</i> with just the names "mean()" and "std()" in them is stored in the variable <i>df_X_new</i>.
+  - We used the variables <i>df_X_test</i>, <i>df_X_train</i>, <i>df_y_test</i>, <i>df_y_train</i> to store the test and training in <i>X_test.txt</i>, <i>X_train.txt</i>, <i>y_train.txt</i>, <i>y_test.txt</i>.
+  - The merged observations and outcome data were stored in the variables <i>df_X</i> and <i>df_y</i>.
+  - The new data set containing a subset of the columns of <i>df_X</i> with just the names "mean()" and "std()" in them is stored in the variable <i>df_X_new</i>.
+  - The new data set containing activities instead of numbers for the outcomes vector <i>y</i> is named <i>df_y_new</i> in the code.
+  - <i>df_X_new</i> and <i>df_y_new</i> are merged into one single dataframe called <i>df</i>.
+  - We used the variables <i>df_subject_test</i>, <i>df_subject_train</i> to store the test and training data representing the subject id for each row. We merged these two vectors in a variable called <i>df_subject</i>.
+  - The dataframe <i>df_subject</i> is appended to the dataframe <i>df</i>. This gives us one big dataframe containing for each row all the 68 observations that we need on the mean and std for each variable along with the activity and the subject id for each row.
+  - The previous step has prepared the data <i>df</i> we needed to create the tidy data set that will be stored in the variable $df2$.
 
 
 * What are the characteristics of the tidy data set obtained ?
