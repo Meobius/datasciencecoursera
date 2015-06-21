@@ -16,6 +16,10 @@ This is the code book describing how we obtain the tidy data set required. We de
   - From the previously merged observation data set <i>X</i>, we create a new data set that contains the average for each variable (column) and for each tuple activity/subject (row). This is our final tidy data set.
 
 * Which intermediate variables did we use ?
+We used the variables <i>df_X_test</i>, <i>df_X_train</i>, <i>df_y_test</i>, <i>df_y_train</i> to store the test and training in  <i>X_test.txt</i>, <i>X_train.txt</i>, <i>y_train.txt</i>, <i>y_test.txt</i>.
+The merged observations and outcome data were stored in the variables <i>df_X</i> and <i>df_y</i>.
+The new data set containing a subset of the columns of <i>df_X</i> with just the names "mean()" and "std()" in them is stored in the variable <i>df_X_new</i>.
+
 
 * What are the characteristics of the tidy data set obtained ?
 Our final tiday data set contains 68 columns and 180 rows where each row corresponds to one possible activity for one subject. As we have 30 subjects and 6 possible activities we can see that the number of rows in our tidy data set is correct.
