@@ -26,7 +26,7 @@ This is the code book describing how we obtain the tidy data set required. We de
   - <i>df_X_new</i> and <i>df_y_new</i> are merged into one single dataframe called <i>df</i>.
   - We used the variables <i>df_subject_test</i>, <i>df_subject_train</i> to store the test and training data representing the subject id for each row. We merged these two vectors in a variable called <i>df_subject</i>.
   - The dataframe <i>df_subject</i> is appended to the dataframe <i>df</i>. This gives us one big dataframe containing for each row all the 68 observations that we need on the mean and std for each variable along with the activity and the subject id for each row.
-  - The previous step has prepared the data <i>df</i> we needed to create the tidy data set that will be stored in the variable $df2$.
+  - The previous step has prepared the data <i>df</i> we needed to create the tidy data set that will be stored in the variable <i>df2</i>.
 
 
 * What are the characteristics of the tidy data set obtained ?
