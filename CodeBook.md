@@ -101,7 +101,9 @@ Our final tiday data set contains 68 columns and 180 rows where each row corresp
 [64] "fBodyBodyAccJerkMag-std()"  
 [65] "fBodyBodyGyroMag-std()"     
 [66] "fBodyBodyGyroJerkMag-std()" 
-[67] "activity"                   
+
+[67] "activity"
+
 [68] "subjects"               
 
 
